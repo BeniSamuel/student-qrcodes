@@ -1,4 +1,8 @@
 package com.benisamuel.www.repository;
 
-public class UserRepository {
+import com.benisamuel.www.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    User getUserByEmail(String email);
 }
